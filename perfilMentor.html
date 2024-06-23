@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <!-- Incluir FullCalendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
+    <!-- Incluir FullCalendar JS -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.14/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.14/index.global.min.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            locale: 'es',
+            initialView: 'dayGridMonth'
+          });
+          calendar.render();
+        });
+  
+      </script>
+
+    <title>Mi Perfil - Polimentor</title>
+</head>
+
+<body class="vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-primary">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fs-1" href="index.html">
+                <img src="img/logo.png" height="70" width="70" />
+                <span class="align-middle ms-3">Polimentor</span>
+            </a>
+            <!-- Toggle Btn -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Sidebar -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand fs-4" href="index.html">
+                        <img src="img/logo.png" height="30" width="30">
+                        <span class="align-middle h5 ms-5"><strong>Polimentor</strong></span>
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- Sidebar Body -->
+                <div class="offcanvas-body d-flex flex-column flex-sm-row">
+                    <ul
+                        class="navbar-nav d-flex flex-row justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                        <li class="nav-item mx-1">
+                            <a class="nav-link" aria-current="page" href="mentorias.html">Mentorias</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link" href="mentorados.html">Mentorados</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link" href="horas.html">Mis horas</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link" aria-current="page" href="material.html">Material de apoyo</a>
+                        </li>
+                    </ul>
+                    <!-- Cerrar sesion -->
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <a class="text-black text-decoration-none px-3 py-1 rounded-4" href="login.html"
+                            style="background-color: #ffde59;">
+                            Cerrar sesión
+                            <i class="bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido -->
+    <div class="container-fluid">
+
+        <div class="row px-4 py-5" id="contenido">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <span class="px-5 py-1 my-3 rounded-4" style="background-color: #ffde59; font-size: 25px;">Mi
+                        Perfil</span>
+                    <!-- Contenido sección 1 -->
+                    <div class="container">
+                        <div class="row px-4 py-5 justify-content-center">
+                            <img class="col-5" src="img/user.png" alt="" id="user-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <!-- Contenido sección 2 -->
+                    <div class="row">
+                        <div class="col-32 py-3">
+                            <p class="text-white my-5"><strong>Nombre:</strong></p>
+                            <span class="form-control border-0 rounded-5 mt-0"
+                                style="background-color: #ffde59; font-size: large; text-align: center;"
+                                id="userName">Nombre Apellidos</span>
+                        </div>
+                        <div class="col-6">
+                            <div class="col-32 py-3">
+                                <p class="text-white my-5"><strong>Correo:</strong></p>
+                                <span class="form-control border-0 rounded-5 mt-5"
+                                    style="background-color: #ffde59; font-size: large; text-align: center;"
+                                    id="userMail">example@alumno.ipn.mx</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="col-32 py-3">
+                                <p class="text-white my-5"><strong>Telefono:</strong></p>
+                                <span class="form-control border-0 rounded-5 mt-5"
+                                    style="background-color: #ffde59; font-size: large; text-align: center;"
+                                    id="userPhoneNumber">0123456789</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <!-- Contenido sección 3 -->
+                    <div class="col-32 py-3">
+                        <p class="text-white my-5"><strong>Horario:</strong></p>
+                        <div id="calendar" class="form-control rounderd-1" style="background-color: white;"></div>
+                    </div>
+                </div>
+               <div class="col-lg-6 col-sm-12">
+                    <!-- Contenido sección 4 -->
+                    <div class="row">
+                        <div class="col-32 py-3">
+                            <p class="text-white my-5"><strong>Materias:</strong></p>
+                            <ul class="list-group" id="subjects-list"
+                                style="background-color: #ffde59; font-size: large; text-align: center;">
+                                <li class="nav-item"> </li>
+                                <li class="nav-item"> </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <div class="col-32 py-3">
+                                <p class="text-white my-5"><strong>Correo:</strong></p>
+                                <span class="form-control border-0 rounded-5 mt-5"
+                                    style="background-color: #ffde59; font-size: x-large; text-align: center;"
+                                    id="userMail">example@alumno.ipn.mx</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="col-32 py-3">
+                                <p class="text-white my-5"><strong>Telefono:</strong></p>
+                                <span class="form-control border-0 rounded-5 mt-5"
+                                    style="background-color: #ffde59; font-size: x-large; text-align: center;"
+                                    id="userPhoneNumber">0123456789</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
