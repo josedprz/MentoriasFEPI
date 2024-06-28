@@ -1,0 +1,79 @@
+{
+    "ISC" : {
+        "Primer Semestre" : [
+            "Calculo",
+            "Analisis Vectorial",
+            "Matematicas Discretas",
+            "Comunicacion Oral y Escrita",
+            "Fundamentos de Programación"
+        ],
+            "Segundo Semestre" : [
+                "Algebra Lineal",
+                "Calculo Aplicado",
+                "Mecanica y Electromagnetismo",
+                "Ingenieria, Etica y Sociedad",
+                "Fundamentos Economicos",
+                "Algoritmos y Estructuras de Datos"
+            ],
+                "Tercer Semestre" : [
+                    "Ecuacuiones Deferenciales",
+                    "Circuitos Electricos",
+                    "Fundamentos de Diseño Digital",
+                    "Bases de datos",
+                    "Finanzas Emoresariales",
+                    "Paradigmas de Programacion",
+                    "Analisis y Diseño de Algoritmos"
+                ]
+    },
+    "IIA" : {
+        "Primer Semestre" : [
+            "Fundamentos de Programacion",
+            "Matematicas Discretas",
+            "Calculo",
+            "Comunicacion Oral y Escrita",
+            "Mecanica y Electromagnetismo",
+            "Fundamentos Economicos"
+        ],
+            "Segundo Semestre" : [
+                "Algoritmos y Estructuras de Datos",
+                "Fundamentos de Diseño Digital",
+                "Calculo Aplicado",
+                "Ingenieria, Etica y Sociedad",
+                "Algebra Lineal",
+                "Finanzas Empresariales"
+            ],
+                "Tercer Semestre" : [
+                    "Analisis y Diseño de Algoritmos",
+                    "Paradigmas de Programacion",
+                    "Ecuaciones Diferenciales",
+                    "Bases de Datos",
+                    "Diseño de Sistemas Digitales",
+                    "Liderazgo Personal"
+                ]
+    },
+    "LCD" : {
+        "Primer Semestre" : [
+            "Fundamentos de Programación",
+            "Matematicas Discretas",
+            "Calculo",
+            "Comunicacion Oral y EScrita",
+            "Introduccion a la Ciencia de Datos"
+        ],
+            "Segundo Semestre" : [
+                "Algoritmos y Estructuras de Datos",
+                "Algebra Lineal",
+                "Calculo Multivariable",
+                "Etica y Legalidad",
+                "Fundamentos Economicos"
+            ],
+                "Tercer Semestre" : [
+                    "Analisis y Diseño de algoritmos",
+                    "Programacion para Ciencia de Datos",
+                    "Probabilidad",
+                    "Bases de Datos",
+                    "Metodos Numericos",
+                    "Finanzas Empresariales"
+                ]
+    }
+
+}
