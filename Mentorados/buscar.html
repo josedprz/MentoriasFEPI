@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="styles/mentorados.css">
+        <link rel="stylesheet" href="styles/buscar.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
-        <title>Mis Mentorados</title>
+        <title>Buscar</title>
     </head>
     <body class="vh-100 overflow-hidden">
         <!-- Navbar -->
@@ -37,14 +37,14 @@
                     <!-- Sidebar Body -->
                     <div class="offcanvas-body d-flex flex-column flex-sm-row">
                         <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-                            <li class="nav-item mx-2">
-                                <a class="nav-link" aria-current="page" href="calendario.html">Mis Mentorías</a>
-                            </li>
                             <li class="nav-item mx-2 rounded-5 px-2" style="background-color: #ffde59;">
-                                <a class="nav-link" href="#">Mentorados</a>
+                                <a class="nav-link" aria-current="page" href="#">Mis Mentorías</a>
                             </li>
                             <li class="nav-item mx-2">
-                                <a class="nav-link" href="horas.html">Mis Horas</a>
+                                <a class="nav-link" href="mentores.html">Mis Mentores</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="horas.html">Validar Horas</a>
                             </li>
                             <li class="nav-item mx-2">
                                 <a class="nav-link" href="material.html">Material de Apoyo</a>
@@ -61,69 +61,46 @@
             </div>
         </nav>
         <div class="container">
-            <div class="row px-4 py-5 justify-content-center" id="contenido">
-                <div class="row col-12 justify-content-center mb-4">
-                    <h1 class="col-2">Mentorados</h1>
-                </div>
-                <div class="row col-9 justify-content-between mb-3">
-                    <div class="col-3 header rounded-2">
-                        Nombre
-                    </div>
-                    <div class="col-3 header rounded-2">
-                        Materia
-                    </div>
-                    <div class="col-3 header rounded-2">
-                        Horarios
-                    </div>
-                </div>
-                <div class="row col-9 justify-content-between mb-3">
-                    <div class="col-3 celda rounded-2">
-                        José Eduardo Pérez Castillo
-                    </div>
-                    <div class="col-3 celda rounded-2">
-                        Matemáticas Avanzadas
-                    </div>
-                    <div class="col-3 celda rounded-2">
-                        L, M, Mi, J, V - 10:00 a 12:00
-                    </div>
-                </div>
-                <div class="row col-9 justify-content-between mb-3">
-                    <div class="col-3 celda rounded-2">
-                        José Eduardo Pérez Castillo
-                    </div>
-                    <div class="col-3 celda rounded-2">
-                        Matemáticas Avanzadas
-                    </div>
-                    <div class="col-3 celda rounded-2">
-                        L, M, Mi, J, V - 10:00 a 12:00
-                    </div>
-                </div>
-                <div class="row col-9 justify-content-between mb-3">
-                    <div class="col-3 celda rounded-2">
-                        José Eduardo Pérez Castillo
-                    </div>
-                    <div class="col-3 celda rounded-2">
-                        Matemáticas Avanzadas
-                    </div>
-                    <div class="col-3 celda rounded-2">
-                        L, M, Mi, J, V - 10:00 a 12:00
-                    </div>
-                </div>
                 <!--
-                <div class="col-lg-6 col-sm-12" id="calend_title">
-                    <h1 class="col-12" style="text-align: center; margin-top: 10%;">No tienes Mentorados</h1>
-                    <p style="color: white; margin-top: 20%; margin-bottom: 20%; padding-left: 7%;">Prueba actualizando tus materias para que mentorados se vean atraidos a tu perfil. <br> <br>
-                        Tambien puedes actualizar tu horario para tener mayor posibilidad de coincidencia.</p>
-                </div>
-                <div class="row col-lg-6 col-sm-12 justify-content-center"></div>
-                -->
-                <div class="row col-lg-6 col-sm-12 justify-content-center mt-4" id="calend_title">
+                <span class="col-lg-6 col-sm-12">
+                    <div id="calendar"></div>
+                </span>
+                <div class="row col-lg-6 col-sm-12 justify-content-center" id="calend_title">
+                    <h1 class="col-12" style="text-align: center;">Mentorías Activas</h1>
                     <a href="" class="col-lg-5 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro">
                         <span>Actualizar Datos</span>
                         <i class="bi-arrow-right reg-arrow" style="background-color: #ffde59;"></i>
                     </a>
                 </div>
-            </div>
+                -->
+            <form class="row px-4 py-5 justify-content-center" action="resultados.html" id="contenido">
+                <div class="row col-lg-6 col-sm-12 title justify-content-center">
+                    <label for="materia">Materia de Intereses</label>
+                </div>
+                <div class="row col-lg-6 col-sm-12 title justify-content-center">
+                    <label for="horario">Horario</label>
+                </div>
+                <div class="row col-lg-6 col-sm-12 justify-content-center mt-5 mb-5">
+                    <select class="col-6 rounded-3" name="materia" id="">
+                        <option value="">Matemáticas Avanzadas</option>
+                        <option value="">Formulación y Evaluación de Proyectos Informáticos</option>
+                        <option value="">Arquitectura de Computadoras</option>
+                    </select>
+                </div>
+                <div class="row col-lg-6 col-sm-12 justify-content-center mt-5 mb-5">
+                    <select class="col-6 rounded-3" name="horario" id="">
+                        <option value="">Matutino</option>
+                        <option value="">Vespertino</option>
+                    </select>
+                </div>
+
+                <div class="row col-12 justify-content-center">
+                    <button class="col-lg-3 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro" style="border: 0;">
+                        <span>Realizar Búsqueda</span>
+                        <i class="bi bi-arrow-right reg-arrow" style="background-color: #ffde59;"></i>
+                    </button>
+                </div>
+            </form>
         </div>
         <script src="js/calendario.js"></script>
     </body>

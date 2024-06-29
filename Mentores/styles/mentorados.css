@@ -1,0 +1,53 @@
+#contenido{
+    /*background-color: #6c1d45;*/
+    background-image: linear-gradient(white, #6c1d45);
+    border-radius: 10px;
+    margin-top: 5%;
+}
+
+h1{
+    text-align: center;
+    color: #2e2e2e;
+}
+
+p{
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    background-color: rgb(36, 36, 36);
+    color: white;
+    text-align: center;
+    padding: 3% 0 3% 0;
+}
+
+.celda{
+    background-color: rgb(233, 233, 233);
+    text-align: center;
+    padding: 3% 0 3% 0;
+}  
+
+.btn-registro{
+    background-color: white;
+    margin: 0px 3% 3% 3%;
+    padding: 2% 5% 2% 5%;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.reg-arrow{
+    border-radius: 50%;
+    padding: 0px 4px 2px 4px;
+    margin-left: 5px;
+}
+
+@media(max-width: 576px){
+    .btn-registro{
+        font-size: 0.7em;
+        padding: 2% 6% 2% 6%;
+    }
+}  
