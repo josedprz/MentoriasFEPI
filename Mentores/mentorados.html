@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="styles/calendario.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
-        <title>Calendario</title>
+        <title>Mis Mentorados</title>
     </head>
     <body class="vh-100 overflow-hidden">
         <!-- Navbar -->
@@ -37,11 +37,11 @@
                     <!-- Sidebar Body -->
                     <div class="offcanvas-body d-flex flex-column flex-sm-row">
                         <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-                            <li class="nav-item mx-2 rounded-5 px-2" style="background-color: #ffde59;">
-                                <a class="nav-link" aria-current="page" href="#">Mis Mentorías</a>
-                            </li>
                             <li class="nav-item mx-2">
-                                <a class="nav-link" href="mentorados.html">Mentorados</a>
+                                <a class="nav-link" aria-current="page" href="calendario.html">Mis Mentorías</a>
+                            </li>
+                            <li class="nav-item mx-2 rounded-5 px-2" style="background-color: #ffde59;">
+                                <a class="nav-link" href="#">Mentorados</a>
                             </li>
                             <li class="nav-item mx-2">
                                 <a class="nav-link" href="horas.html">Mis Horas</a>
@@ -62,15 +62,12 @@
         </nav>
         <div class="container">
             <div class="row px-4 py-5" id="contenido">
-                <span class="col-lg-6 col-sm-12">
-                    <div id="calendar"></div>
+                <span class="col-lg-6 col-sm-12" id="calend_title">
+                    <h1 class="col-12" style="text-align: center; margin-top: 10%;">No tienes Mentorados</h1>
+                    <p style="color: white; margin-top: 20%; margin-bottom: 20%; padding-left: 7%;">Prueba actualizando tus materias para que mentorados se vean atraidos a tu perfil. <br> <br>
+                        Tambien puedes actualizar tu horario para tener mayor posibilidad de coincidencia.</p>
                 </span>
-                <div class="row col-lg-6 col-sm-12 justify-content-center" id="calend_title">
-                    <h1 class="col-12" style="text-align: center;">Mentorías Activas</h1>
-                    <a href="" class="col-lg-5 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro">
-                        <span>Actualizar Datos</span>
-                        <i class="bi-arrow-right reg-arrow" style="background-color: #ffde59;"></i>
-                    </a>
+                <div class="row col-lg-6 col-sm-12 justify-content-center">
                 </div>
             </div>
         </div>
