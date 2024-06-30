@@ -1,13 +1,35 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recibir los datos del formulario
+    session_start();
+
+    $conexion = mysqli_connect("localhost", "root", "", "fepi");
+    $nombre_mentor = $_POST['nombre'];
     $mentor = $_POST['mentor'];
-    $hora = $_POST['horas'];
-    
-    // Aquí puedes realizar el procesamiento para inscribir al usuario con el mentor y la hora seleccionados
-    // Por ejemplo, guardar los datos en la base de datos, enviar correos, etc.
-    
-    // Redirigir o mostrar un mensaje de confirmación
-    echo "Inscripción realizada con éxito para el mentor $mentor en la hora $hora.";
-}
+    $materia = $_POST['materia'];
+    $hora = $_POST['hora'];
+
+    //Verificar si el mentorado ya está inscrito en esa hora
+    $query_verifica = "SELECT * FROM asesorias WHERE mentorado = '" . $_SESSION['user'] . "' AND hora = '$hora'";
+    $result = mysqli_query($conexion, $query_verifica);
+    if(mysqli_num_rows($result) > 0){
+        echo "Ya tienes una asesoría en ese horario.";
+        echo "<a href='buscar.php'>Regresar</a>";
+        exit();
+    }else{
+        /*
+        $query_verifica = "SELECT * FROM asesorias WHERE mentor = '$mentor' AND hora = '$hora'";
+        $result = mysqli_query($conexion, $query_verifica);
+        if(mysqli_num_rows($result) > 0){
+            echo "El mentor ya tiene una asesoría en ese horario.";
+            echo "<a href='buscar.php'>Regresar</a>";
+            exit();
+        }
+        */
+        $query = "INSERT INTO asesorias (mentor, mentorado, materia, hora, n_mentor, n_mentorado) 
+                VALUES ('$mentor', '" . $_SESSION['user'] . "', '$materia', '$hora', '$nombre_mentor', '" . $_SESSION['nombre'] . "')";
+
+        $result = mysqli_query($conexion, $query);
+
+        echo "Inscripción realizada con éxito para el mentor <strong>$nombre_mentor</strong> con correo <strong>$mentor</strong> en la hora <strong>$hora.</strong>";   
+        echo "<br><a href='calendario.php'>Regresar a Mentorías</a>";
+    }
 ?>

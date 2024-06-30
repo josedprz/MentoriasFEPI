@@ -28,7 +28,10 @@ a{
 .celda{
     background-color: rgb(233, 233, 233);
     text-align: center;
-    padding: 3% 0 3% 0;
+    padding: 3%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }  
 
 .btn-registro{

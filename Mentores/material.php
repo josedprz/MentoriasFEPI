@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -16,7 +19,7 @@
         <nav class="navbar navbar-expand-sm navbar-primary">
             <div class="container">
                 <!-- Logo -->
-                <a class="navbar-brand fs-4" href="../index.html">
+                <a class="navbar-brand fs-4" href="../index.php">
                     <img src="../img/logo.png" height="30" width="30"/>
                     <span class="align-middle ms-5">Polimentor</span>
                 </a>
@@ -28,7 +31,7 @@
                 <!-- Sidebar -->
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <a class="navbar-brand fs-4" href="../index.html">
+                        <a class="navbar-brand fs-4" href="../index.php">
                             <img src="../img/logo.png" height="30" width="30">
                             <span class="align-middle h5 ms-5"><strong>Polimentor</strong></span>
                         </a>
@@ -38,13 +41,13 @@
                     <div class="offcanvas-body d-flex flex-column flex-sm-row">
                         <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
                             <li class="nav-item mx-2">
-                                <a class="nav-link" aria-current="page" href="calendario.html">Mis Mentorías</a>
+                                <a class="nav-link" aria-current="page" href="calendario.php">Mis Mentorías</a>
                             </li>
                             <li class="nav-item mx-2">
-                                <a class="nav-link" href="mentorados.html">Mentorados</a>
+                                <a class="nav-link" href="mentorados.php">Mentorados</a>
                             </li>
                             <li class="nav-item mx-2">
-                                <a class="nav-link" href="horas.html">Mis Horas</a>
+                                <a class="nav-link" href="horas.php">Mis Horas</a>
                             </li>
                             <li class="nav-item mx-2 rounded-5 px-2" style="background-color: #ffde59;">
                                 <a class="nav-link" href="#">Material de Apoyo</a>
@@ -52,8 +55,12 @@
                         </ul>
                         <!-- Login -->
                         <div class="d-flex justify-content-center align-items-center gap-3">
-                            <a class="text-black text-decoration-none px-3 py-1 rounded-4" href="login.html" style="background-color: #ffde59;">
-                                Jesús Pérez
+                            <a class="text-black text-decoration-none px-3 py-1 rounded-4" href="login.php" style="background-color: #ffde59;">
+                                <?php echo $_SESSION['nombre']; 
+                                ?>
+                            </a>
+                            <a class="text-light text-decoration-none px-3 py-1 rounded-4" href="cerrar.php"  style="background-color: rgb(227, 68, 68)">
+                                Cerrar Sesión
                             </a>
                         </div>
                     </div>

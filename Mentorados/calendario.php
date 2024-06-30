@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -16,7 +19,7 @@
         <nav class="navbar navbar-expand-sm navbar-primary">
             <div class="container">
                 <!-- Logo -->
-                <a class="navbar-brand fs-4" href="../index.html">
+                <a class="navbar-brand fs-4" href="../index.php">
                     <img src="../img/logo.png" height="30" width="30"/>
                     <span class="align-middle ms-5">Polimentor</span>
                 </a>
@@ -28,7 +31,7 @@
                 <!-- Sidebar -->
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <a class="navbar-brand fs-4" href="../index.html">
+                        <a class="navbar-brand fs-4" href="../index.php">
                             <img src="../img/logo.png" height="30" width="30">
                             <span class="align-middle h5 ms-5"><strong>Polimentor</strong></span>
                         </a>
@@ -41,19 +44,23 @@
                                 <a class="nav-link" aria-current="page" href="#">Mis Mentorías</a>
                             </li>
                             <li class="nav-item mx-2">
-                                <a class="nav-link" href="mentores.html">Mis Mentores</a>
+                                <a class="nav-link" href="mentores.php">Mis Mentores</a>
                             </li>
                             <li class="nav-item mx-2">
-                                <a class="nav-link" href="horas.html">Validar Horas</a>
+                                <a class="nav-link" href="horas.php">Validar Horas</a>
                             </li>
                             <li class="nav-item mx-2">
-                                <a class="nav-link" href="material.html">Material de Apoyo</a>
+                                <a class="nav-link" href="material.php">Material de Apoyo</a>
                             </li>
                         </ul>
                         <!-- Login -->
                         <div class="d-flex justify-content-center align-items-center gap-3">
-                            <a class="text-black text-decoration-none px-3 py-1 rounded-4" href="login.html" style="background-color: #ffde59;">
-                                Jesús Pérez
+                            <a class="text-black text-decoration-none px-3 py-1 rounded-4" href="login.php" style="background-color: #ffde59;">
+                                <?php echo $_SESSION['nombre']; 
+                                ?>
+                            </a>
+                            <a class="text-light text-decoration-none px-3 py-1 rounded-4" href="cerrar.php"  style="background-color: rgb(227, 68, 68)">
+                                Cerrar Sesión
                             </a>
                         </div>
                     </div>
@@ -74,22 +81,45 @@
                 </div>
                 -->
             <div class="row px-4 py-5" id="contenido">
-                <div class="col-lg-6 col-sm-12" id="calend_title">
-                    <h1 class="col-12" style="text-align: center; margin-top: 10%;">No tienes Mentorías Activas</h1>
-                    <p style="color: white; margin-top: 20%; margin-bottom: 20%; padding-left: 7%;">Prueba actualizando tus materias para que mentorados se vean atraidos a tu perfil. <br> <br>
-                        Tambien puedes actualizar tu horario para tener mayor posibilidad de coincidencia.</p>
-                </div>
-                <div class="row col-lg-6 col-sm-12 justify-content-center"></div>
-                <div class="row col-12 justify-content-center">
-                    <a href="" class="col-lg-3 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro">
-                        <span>Actualizar Datos</span>
-                        <i class="bi bi-arrow-right reg-arrow" style="background-color: #ffde59;"></i>
-                    </a>
-                    <a href="buscar.html" class="col-lg-3 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro">
-                        <span>Buscar</span>
-                        <i class="bi bi-search reg-arrow" style="background-color: #ffde59;"></i>
-                    </a>
-                </div>
+                <?php
+                    $conexion = mysqli_connect("localhost", "root", "", "fepi");
+                    $correo = $_SESSION['user'];
+                    $query = "SELECT * FROM asesorias WHERE asesorias.mentorado = '$correo'";
+                    $result = mysqli_query($conexion, $query);
+                    if(mysqli_num_rows($result) == 0) {
+                        echo "  <div class='col-lg-6 col-sm-12' id='calend_title'>
+                                    <h1 class='col-12' style='text-align: center; margin-top: 5%;'>No tienes Mentorías Activas</h1>
+                                    <p style='color: white; margin-top: 20%; margin-bottom: 7%; padding-left: 7%;'>Prueba actualizando tus materias para que mentorados se vean atraidos a tu perfil. <br> <br>
+                                        Tambien puedes actualizar tu horario para tener mayor posibilidad de coincidencia.</p>
+                                </div>
+                                <div class='row col-lg-12 col-sm-12 mt-4 justify-content-center'>
+                                    <a href='' class='col-lg-4 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro'>
+                                        <span>Actualizar Datos</span>
+                                        <i class='bi-arrow-right reg-arrow' style='background-color: #ffde59;'></i>
+                                    </a>
+                                    <a href='buscar.php' class='col-lg-4 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro'>
+                                        <span>Buscar</span>
+                                        <i class='bi-search reg-arrow' style='background-color: #ffde59;'></i>
+                                    </a>
+                                </div>";
+                    }
+                    else {
+                        echo "  <span class='col-lg-7 col-sm-12'>
+                                    <div id='calendar'></div>
+                                </span>
+                                <div class='row col-lg-5 col-sm-12 justify-content-center' id='calend_title'>
+                                    <h1 class='col-12' style='text-align: center;'>Mentorías Activas</h1>
+                                    <a href='' class='col-lg-5 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro'>
+                                        <span>Actualizar Datos</span>
+                                        <i class='bi-arrow-right reg-arrow' style='background-color: #ffde59;'></i>
+                                    </a>
+                                    <a href='buscar.php' class='col-lg-5 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro'>
+                                        <span>Buscar</span>
+                                        <i class='bi-search reg-arrow' style='background-color: #ffde59;'></i>
+                                    </a>
+                                </div>";
+                    }
+                ?>
             </div>
         </div>
         <script src="js/calendario.js"></script>
