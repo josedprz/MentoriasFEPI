@@ -39,3 +39,7 @@
     border: 3px solid #6c1d45; /* Cambia el color del borde si es necesario */
     border-radius: 10px;
 }
+
+.nav-link .bi-bell {
+    font-size: 1.5rem; /* Tamaño personalizado */
+}
