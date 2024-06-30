@@ -73,7 +73,7 @@
                     </a>
                 </div>
                 -->
-            <form class="row px-4 py-5 justify-content-center" action="resultados.html" id="contenido">
+            <form class="row px-4 py-5 justify-content-center" action="resultados.php" method="post" id="contenido">
                 <div class="row col-lg-6 col-sm-12 title justify-content-center">
                     <label for="materia">Materia de Intereses</label>
                 </div>
@@ -82,15 +82,16 @@
                 </div>
                 <div class="row col-lg-6 col-sm-12 justify-content-center mt-5 mb-5">
                     <select class="col-6 rounded-3" name="materia" id="">
-                        <option value="">Matemáticas Avanzadas</option>
-                        <option value="">Formulación y Evaluación de Proyectos Informáticos</option>
-                        <option value="">Arquitectura de Computadoras</option>
+                        <option value="1">Matemáticas Avanzadas</option>
+                        <option value="2">Formulación y Evaluación de Proyectos Informáticos</option>
+                        <option value="3">Arquitectura de Computadoras</option>
+                        <option value="4">Redes de Computadoras</option>
                     </select>
                 </div>
                 <div class="row col-lg-6 col-sm-12 justify-content-center mt-5 mb-5">
                     <select class="col-6 rounded-3" name="horario" id="">
-                        <option value="">Matutino</option>
-                        <option value="">Vespertino</option>
+                        <option value="matutino">Matutino</option>
+                        <option value="vespertino">Vespertino</option>
                     </select>
                 </div>
 
