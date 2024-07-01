@@ -79,12 +79,6 @@
                                     <h1 class='col-12' style='text-align: center; margin-top: 5%;'>No tienes Mentorías Activas</h1>
                                     <p style='color: white; margin-top: 20%; margin-bottom: 7%; padding-left: 7%;'>Prueba actualizando tus materias para que mentorados se vean atraidos a tu perfil. <br> <br>
                                         Tambien puedes actualizar tu horario para tener mayor posibilidad de coincidencia.</p>
-                                </div>
-                                <div class='row col-lg-12 col-sm-12 justify-content-center' id='calend_title'>
-                                    <a href='' class='col-lg-5 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro'>
-                                        <span>Actualizar Datos</span>
-                                        <i class='bi-arrow-right reg-arrow' style='background-color: #ffde59;'></i>
-                                    </a>
                                 </div>";
                     }
                     else {
@@ -92,11 +86,7 @@
                                     <div id='calendar'></div>
                                 </span>
                                 <div class='row col-lg-5 col-sm-12 justify-content-center' id='calend_title'>
-                                    <h1 class='col-12' style='text-align: center;'>Mentorías Activas</h1>
-                                    <a href='' class='col-lg-5 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro'>
-                                        <span>Actualizar Datos</span>
-                                        <i class='bi-arrow-right reg-arrow' style='background-color: #ffde59;'></i>
-                                    </a>
+                                    <h1 class='col-12 align-self-center' style='text-align: center;'>Mentorías Activas</h1>
                                 </div>";
                     }
                 ?>

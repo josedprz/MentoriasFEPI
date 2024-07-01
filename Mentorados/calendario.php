@@ -93,10 +93,6 @@
                                         Tambien puedes actualizar tu horario para tener mayor posibilidad de coincidencia.</p>
                                 </div>
                                 <div class='row col-lg-12 col-sm-12 mt-4 justify-content-center'>
-                                    <a href='' class='col-lg-4 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro'>
-                                        <span>Actualizar Datos</span>
-                                        <i class='bi-arrow-right reg-arrow' style='background-color: #ffde59;'></i>
-                                    </a>
                                     <a href='buscar.php' class='col-lg-4 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro'>
                                         <span>Buscar</span>
                                         <i class='bi-search reg-arrow' style='background-color: #ffde59;'></i>
@@ -108,11 +104,7 @@
                                     <div id='calendar'></div>
                                 </span>
                                 <div class='row col-lg-5 col-sm-12 justify-content-center' id='calend_title'>
-                                    <h1 class='col-12' style='text-align: center;'>Mentorías Activas</h1>
-                                    <a href='' class='col-lg-5 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro'>
-                                        <span>Actualizar Datos</span>
-                                        <i class='bi-arrow-right reg-arrow' style='background-color: #ffde59;'></i>
-                                    </a>
+                                    <h1 class='col-12 align-self-end' style='text-align: center;'>Mentorías Activas</h1>
                                     <a href='buscar.php' class='col-lg-5 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro'>
                                         <span>Buscar</span>
                                         <i class='bi-search reg-arrow' style='background-color: #ffde59;'></i>

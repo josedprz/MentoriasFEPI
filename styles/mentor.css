@@ -1,9 +1,16 @@
+body{
+    /*background-color: #6c1d45;*/
+    background-image: linear-gradient(white, #6c1d45);
+    background-attachment: fixed;
+}
 #contenido{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.278);
+    backdrop-filter: blur(100px);
     border: #6c1d45;
     border-style: solid;
     border-width: 3px;
     border-radius: 10px;
+    margin-top: 5%;
 }
 
 p{
@@ -22,11 +29,11 @@ p{
 }
 
 .btn-registro{    
-    background-color: white;
+    background-color: rgb(231, 231, 231);
     border: #6c1d45;
     border-style: solid;
     border-width: 3px;
-    margin: 4% 3% 3% 3%;
+    margin: 0;
     padding: 2% 5% 2% 5%;
     border-radius: 50px;
     text-align: center;

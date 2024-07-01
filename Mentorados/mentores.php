@@ -111,12 +111,14 @@
                                 <div class='row col-lg-6 col-sm-12 justify-content-center'></div>";
                     }
                 ?>
+                <!--
                 <div class="row col-lg-6 col-sm-12 justify-content-center mt-4" id="calend_title">
                     <a href="" class="col-lg-5 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro">
                         <span>Actualizar Datos</span>
                         <i class="bi-arrow-right reg-arrow" style="background-color: #ffde59;"></i>
                     </a>
                 </div>
+                -->
             </div>
         </div>
         <script src="js/calendario.js"></script>

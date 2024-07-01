@@ -60,16 +60,20 @@
         </nav>
         <div class="container">
             <div class="row px-4 py-5" id="contenido">
-                <span class="col-lg-6 col-sm-12">
-                    <span class="px-4 py-1 my-3 rounded-4" style="background-color: #ffde59;">Polimentor</span>
-                    <h1 class="text-white my-4" style="font-weight:bold;">Mentorias flexibles para tus metas.</h1>
-                    <p class="text-white my-3" id="descrip">Polimentor es una iniciativa para ofrecer a alumnos de nuevo ingreso la oportunidad de mejorar su desempeño académico a través de mentorías impartidas por alumnos de últimos semestres, y a la vez que ellos puedan liberar horas del servicio social.</p>
-                    <div class="row justify-content-center align-items-center my-5">    
-                        <a href="mentorado.html" class="col-4 col-lg-4 col-md-8 col-sm-12 text-black text-decoration-none btn-registro">
+                <span class="row col-lg-6 col-sm-12">
+                    <span class="row col-3 px-4 py-1 my-3" style="max-height:50px;">
+                        <p class="rounded-4" style="background-color: #ffde59; text-align:center;display:flex;align-items:center;justify-content:center;">
+                            Polimentor
+                        </p>
+                    </span>
+                    <h1 class="col-12 text-white my-4" style="font-weight:bold;">Mentorias flexibles para tus metas.</h1>
+                    <p class="col-12 text-white my-3" id="descrip">Polimentor es una iniciativa para ofrecer a alumnos de nuevo ingreso la oportunidad de mejorar su desempeño académico a través de mentorías impartidas por alumnos de últimos semestres, y a la vez que ellos puedan liberar horas del servicio social.</p>
+                    <div class="row justify-content-center align-items-center align-self-end my-5">    
+                        <a href="mentorado.html" class="col-4 col-lg-4 col-md-8 col-sm-12 align-self-end text-black text-decoration-none btn-registro">
                             <span>Registrarse como Mentorado</span>
                             <i class="bi-arrow-right reg-arrow" style="background-color: #ffde59;"></i>
                         </a>
-                        <a href="mentor.html" class="col-4 col-lg-4 col-md-8 col-sm-12 text-black text-decoration-none btn-registro">
+                        <a href="mentor.html" class="col-4 col-lg-4 col-md-8 col-sm-12 align-self-end text-black text-decoration-none btn-registro">
                             <span>Registrarse como Mentor</span>
                             <i class="bi-arrow-right align-items-center reg-arrow" style="background-color: #ffde59;"></i>
                         </a>
@@ -90,7 +94,7 @@
                     <img class="my-4" src="img/skill.jpg" alt="">
                     <p class="">Estudiantes de recién ingreso y hasta  tercer semestre de la ESCOM, con los cuales se llevará a cabo el ejercicio mentoral.</p>
                 </div>
-                <div class="col-8 mt-5" style="text-align: center;">Para mayor información acudir a la oficina de servicio social en el Departamento de Extensiones y Apoyos Educativos.</div>
+                <div class="col-8 mt-5" style="text-align: center; color:white;">Para mayor información acudir a la oficina de servicio social en el Departamento de Extensiones y Apoyos Educativos.</div>
             </div>
         </div>
     </body>

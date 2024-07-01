@@ -1,8 +1,7 @@
-#contenido{
+body{
     /*background-color: #6c1d45;*/
     background-image: linear-gradient(white, #6c1d45);
-    border-radius: 10px;
-    margin-top: 5%;
+    background-attachment: fixed;
 }
 
 p{
