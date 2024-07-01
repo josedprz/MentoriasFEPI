@@ -33,8 +33,8 @@
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
         <title>Resultados</title>
     </head>
-    <body class="vh-100 overflow-hidden">
-        <nav class="navbar navbar-expand-sm navbar-primary">
+    <body class="vh-100">
+        <nav class="navbar navbar-expand-lg navbar-primary">
             <div class="container">
                 <a class="navbar-brand fs-4" href="../index.php">
                     <img src="../img/logo.png" height="30" width="30"/>
@@ -53,7 +53,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     
-                    <div class="offcanvas-body d-flex flex-column flex-sm-row">
+                    <div class="offcanvas-body d-flex flex-column flex-lg-row">
                         <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
                             <li class="nav-item mx-2">
                                 <a class="nav-link rounded-5 px-2" style="background-color: #ffde59;" aria-current="page" href="calendario.php">Mis Mentorías</a>
@@ -70,7 +70,7 @@
                         </ul>
                         
                         <div class="d-flex justify-content-center align-items-center gap-3">
-                            <a class="text-black text-decoration-none px-3 py-1 rounded-4" href="login.php" style="background-color: #ffde59;">
+                            <a class="text-black text-decoration-none px-3 py-1 rounded-4" href="#" style="background-color: #ffde59;">
                                 <?php echo $_SESSION['nombre']; 
                                 ?>
                             </a>

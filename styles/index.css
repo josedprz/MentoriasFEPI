@@ -43,3 +43,15 @@ p{
         padding: 2% 6% 2% 6%;
     }
 }
+#polimentor{
+    background-color: #ffde59;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+@media(min-width: 992px) and (max-width: 1200px){
+    #dpoli{
+        width: 50%;
+    }
+}

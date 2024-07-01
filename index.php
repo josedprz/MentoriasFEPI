@@ -13,7 +13,7 @@
     </head>
     <body class="vh-100">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-sm navbar-primary">
+        <nav class="navbar navbar-expand-md navbar-primary">
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand fs-4" href="index.php">
@@ -35,7 +35,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <!-- Sidebar Body -->
-                    <div class="offcanvas-body d-flex flex-column flex-sm-row">
+                    <div class="offcanvas-body d-flex flex-column flex-md-row">
                         <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
                             <li class="nav-item mx-2">
                                 <a class="nav-link" aria-current="page" href="nosotros.html">Nosotros</a>
@@ -61,11 +61,11 @@
         <div class="container">
             <div class="row px-4 py-5" id="contenido">
                 <span class="row col-lg-6 col-sm-12">
-                    <span class="row col-3 px-4 py-1 my-3" style="max-height:50px;">
-                        <p class="rounded-4" style="background-color: #ffde59; text-align:center;display:flex;align-items:center;justify-content:center;">
+                    <div class="row col-lg-4 col-md-4 col-sm-5 px-4 py-1 my-3" id="dpoli" style="max-height:50px;">
+                        <p class="rounded-4" id="polimentor">
                             Polimentor
                         </p>
-                    </span>
+                    </div>
                     <h1 class="col-12 text-white my-4" style="font-weight:bold;">Mentorias flexibles para tus metas.</h1>
                     <p class="col-12 text-white my-3" id="descrip">Polimentor es una iniciativa para ofrecer a alumnos de nuevo ingreso la oportunidad de mejorar su desempeño académico a través de mentorías impartidas por alumnos de últimos semestres, y a la vez que ellos puedan liberar horas del servicio social.</p>
                     <div class="row justify-content-center align-items-center align-self-end my-5">    
@@ -85,13 +85,13 @@
                 <h1 class="col-12 mb-5 justify-content-center" style="text-align: center; color: #6c1d45;"><strong>Figuras Clave</strong></h1>
                 <div class="col-4 tarjetas">
                     <h3 class="card_title">Mentores</h3>
-                    <img class="my-4" src="img/mentor.jpg" alt="">
+                    <img class="my-4 img-fluid" src="img/mentor.jpg" alt="">
                     <p>Estudiantes de semestres más avanzados de la ESCOM, que se forman como mentores.</p>
                 </div>
                 <div class="col-2"></div>
                 <div class="col-4 tarjetas">
                     <h3 class="card_title">Mentorados</h3>
-                    <img class="my-4" src="img/skill.jpg" alt="">
+                    <img class="my-4 img-fluid" src="img/skill.jpg" alt="">
                     <p class="">Estudiantes de recién ingreso y hasta  tercer semestre de la ESCOM, con los cuales se llevará a cabo el ejercicio mentoral.</p>
                 </div>
                 <div class="col-8 mt-5" style="text-align: center; color:white;">Para mayor información acudir a la oficina de servicio social en el Departamento de Extensiones y Apoyos Educativos.</div>

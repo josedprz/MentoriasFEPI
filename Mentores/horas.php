@@ -14,9 +14,9 @@
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
         <title>Mis Horas</title>
     </head>
-    <body class="vh-100 overflow-hidden">
+    <body class="vh-100">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-sm navbar-primary">
+        <nav class="navbar navbar-expand-lg navbar-primary">
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand fs-4" href="../index.php">
@@ -38,7 +38,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <!-- Sidebar Body -->
-                    <div class="offcanvas-body d-flex flex-column flex-sm-row">
+                    <div class="offcanvas-body d-flex flex-column flex-lg-row">
                         <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
                             <li class="nav-item mx-2">
                                 <a class="nav-link" aria-current="page" href="calendario.php">Mis Mentorías</a>
@@ -55,7 +55,7 @@
                         </ul>
                         <!-- Login -->
                         <div class="d-flex justify-content-center align-items-center gap-3">
-                            <a class="text-black text-decoration-none px-3 py-1 rounded-4" href="login.php" style="background-color: #ffde59;">
+                            <a class="text-black text-decoration-none px-3 py-1 rounded-4" href="#" style="background-color: #ffde59;">
                                 <?php echo $_SESSION['nombre'];
                                 ?>
                             </a>
@@ -77,10 +77,6 @@
                     <h1 class="col-8 mb-5" style="text-align: center; margin-top: 10%;">Horas sin Validar</h1>
                     <div class="col-8 horas align-self-end rounded-2 border border-2 border-secondary">2 Horas</div>
                 </div>
-                <a href="reg_horas.php" class="col-lg-4 col-md-8 col-sm-12 text-black align-self-end text-decoration-none btn-registro">
-                    <span>Registrar horas</span>
-                    <i class="bi-arrow-right reg-arrow" style="background-color: #ffde59;"></i>
-                </a>
             </div>
         </div>
         <script src="js/calendario.js"></script>

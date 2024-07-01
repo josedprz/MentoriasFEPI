@@ -18,7 +18,7 @@
     </head>
     <body class="vh-100 overflow-hidden">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-sm navbar-primary">
+        <nav class="navbar navbar-expand-md navbar-primary">
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand fs-4" href="index.php">
@@ -40,7 +40,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <!-- Sidebar Body -->
-                    <div class="offcanvas-body d-flex flex-column flex-sm-row">
+                    <div class="offcanvas-body d-flex flex-column flex-md-row">
                         <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
                             <li class="nav-item mx-2">
                                 <a class="nav-link" aria-current="page" href="nosotros.html">Nosotros</a>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="row col-6">
                     <div class="row justify-content-center align-items-center my-3">    
-                        <a href="" class="col-4 col-lg-4 col-md-8 col-sm-12 text-black text-decoration-none btn-registro">
+                        <a href="index.php" class="col-4 col-lg-4 col-md-8 col-sm-12 text-black text-decoration-none btn-registro">
                             <i class="bi-arrow-left align-items-center reg-arrow" style="margin-right: 5px;"></i>
                             <span class="acep_canc">Cancelar</span>
                         </a>

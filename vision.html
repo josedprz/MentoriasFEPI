@@ -10,9 +10,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <title>Visión</title>
     </head>
-    <body class="vh-100 overflow-hidden">
+    <body class="vh-100">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-sm navbar-primary">
+        <nav class="navbar navbar-expand-md navbar-primary">
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand fs-4" href="index.php">
@@ -34,7 +34,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <!-- Sidebar Body -->
-                    <div class="offcanvas-body d-flex flex-column flex-sm-row">
+                    <div class="offcanvas-body d-flex flex-column flex-md-row">
                         <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
                             <li class="nav-item mx-2">
                                 <a class="nav-link" aria-current="page" href="nosotros.html">Nosotros</a>
@@ -60,11 +60,11 @@
         <div class="container">
             <div class="row px-4 py-5" id="contenido">
                 <span class="row col-lg-6 col-sm-12">
-                    <span class="row col-3 px-4 py-1 my-3" style="max-height:50px;">
-                        <p class="rounded-4" style="background-color: #ffde59; text-align:center;display:flex;align-items:center;justify-content:center;">
+                    <div class="row col-lg-4 col-md-4 col-sm-5 px-4 py-1 my-3" id="dpoli" style="max-height:50px;">
+                        <p class="rounded-4" id="polimentor">
                             Polimentor
                         </p>
-                    </span>
+                    </div>
                     <h1 class="col-12 text-white my-4" style="font-weight:bold;">ESCOM</h1>
                     <p class="col-12 text-white my-3" id="descrip">Convertirnos en la plataforma líder donde se promueve una cultura donde se apoyan entre estudiantes, fomentando el intercambio de conocimientos y experiencias para el desarrollo de cada estudiante, así contribuyendo a la reducción de la deserción escolar y el aumento de la tasa de titulación.</p>
                     <div class="row justify-content-center align-items-center align-self-end my-5">    
@@ -78,7 +78,7 @@
                         </a>
                     </div>
                 </span>
-                <img class="col-lg-6 col-sm-12" id="cont-img" src="img/image.png" alt="">
+                <img class="col-lg-6 col-sm-12 img-fluid" id="cont-img" src="img/image.png" alt="">
             </div>
         </div>
     </body>
